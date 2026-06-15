@@ -101,9 +101,9 @@
     {{-- ==========================================
          MODAL PREVIEW DETAIL SURAT PIMPINAN
     =========================================== --}}
-    <div id="previewModal" class="fixed inset-0 bg-gray-900 bg-opacity-60 items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300">
+    <div id="previewModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm items-center justify-center z-[100] hidden opacity-0 transition-opacity duration-300">
         <div class="absolute inset-0" onclick="closePreviewModal()"></div>
-        <div class="relative bg-white rounded-xl shadow-2xl w-full max-w-lg mx-4 transform transition-all translate-y-4 duration-300 m-auto mt-20" id="previewModalContent">
+        <div class="relative bg-white rounded-xl shadow-2xl w-full max-w-lg mx-4 transform transition-all translate-y-4 duration-300" id="previewModalContent">
             
             <div class="px-6 py-4 border-b border-gray-100 bg-gray-50 flex justify-between items-start rounded-t-xl">
                 <div>
@@ -135,7 +135,7 @@
                     <button type="button" onclick="closePreviewModal()" class="px-5 py-2.5 border border-gray-300 rounded-lg text-sm font-bold text-gray-600 hover:bg-gray-50 transition">
                         Tutup
                     </button>
-                    <a href="{{ route('dokumen.download', $item->id) }}" id="btnLihatDokumen" target="_blank" class="px-5 py-2.5 bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 rounded-lg text-sm font-bold shadow-sm transition flex items-center">
+                    <a href="#" id="btnLihatDokumen" target="_blank" class="px-5 py-2.5 bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 rounded-lg text-sm font-bold shadow-sm transition flex items-center">
                         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                         Lihat Dokumen
                     </a>

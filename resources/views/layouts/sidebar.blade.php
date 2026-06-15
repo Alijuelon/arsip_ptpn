@@ -251,7 +251,7 @@
             text: "Sesi Anda akan segera berakhir.",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#4f46e5',
+            confirmButtonColor: '#16a34a',
             cancelButtonColor: '#ef4444',
             confirmButtonText: 'Ya, Keluar',
             cancelButtonText: 'Batal',

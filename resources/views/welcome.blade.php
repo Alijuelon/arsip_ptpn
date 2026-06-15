@@ -21,9 +21,9 @@
                     extend: {
                         fontFamily: { sans: ['Inter', 'sans-serif'] },
                         colors: {
-                            primary: '#4f46e5', // Indigo-600
-                            'primary-hover': '#4338ca', // Indigo-700
-                            'primary-light': '#e0e7ff' // Indigo-100
+                            primary: '#16a34a', // green-600
+                            'primary-hover': '#15803d', // green-700
+                            'primary-light': '#dcfce7' // green-100
                         },
                         animation: {
                             'blob': 'blob 7s infinite',
@@ -70,7 +70,7 @@
             <div class="flex justify-between items-center h-20">
                 
                 <div class="flex items-center gap-3 group cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="bg-gradient-to-tr from-primary to-blue-500 p-2 rounded-xl shadow-lg shadow-primary/30 w-12 h-12 flex items-center justify-center overflow-hidden transform transition-transform group-hover:rotate-6 group-hover:scale-105 duration-300">
+                    <div class="bg-gradient-to-tr from-primary to-emerald-500 p-2 rounded-xl shadow-lg shadow-primary/30 w-12 h-12 flex items-center justify-center overflow-hidden transform transition-transform group-hover:rotate-6 group-hover:scale-105 duration-300">
                         <img src="{{ asset('images/logo.png') }}" alt="Logo" class="w-full h-full object-contain filter drop-shadow-md">
                     </div>
                     <div>
@@ -116,9 +116,9 @@
 
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
         <div class="absolute inset-0 w-full h-full bg-[#f4f7fc] z-0"></div>
-        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob z-0"></div>
-        <div class="absolute top-0 -right-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000 z-0"></div>
-        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000 z-0"></div>
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob z-0"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-emerald-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000 z-0"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-lime-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000 z-0"></div>
 
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTAgNDBoNDBWMEgwem0zOSAzaC0zOXYtMzlNMzlWMGgtMzkiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgwLDAsMCwwLjA0KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50 z-0"></div>
 
@@ -134,7 +134,7 @@
 
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight leading-[1.1] mb-6">
                 Transformasi Digital <br class="hidden sm:block" />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-indigo-600 inline-block animate-float">Arsip Perusahaan</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-500 to-green-700 inline-block animate-float">Arsip Perusahaan</span>
             </h1>
 
             <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 mb-10 leading-relaxed font-medium" data-aos="fade-up" data-aos-delay="400">
@@ -144,7 +144,7 @@
             @if (Route::has('login'))
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4" data-aos="zoom-in" data-aos-delay="600">
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="w-full sm:w-auto px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary to-blue-600 hover:from-primary-hover hover:to-blue-700 rounded-full shadow-xl shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+                    <a href="{{ url('/dashboard') }}" class="w-full sm:w-auto px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary to-emerald-600 hover:from-primary-hover hover:to-emerald-700 rounded-full shadow-xl shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
                         Buka Dashboard
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </a>
@@ -203,7 +203,7 @@
 
     <section id="panduan" class="py-24 bg-gray-900 text-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full mix-blend-screen filter blur-[100px] opacity-20 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[100px] opacity-20 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-600 rounded-full mix-blend-screen filter blur-[100px] opacity-20 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">

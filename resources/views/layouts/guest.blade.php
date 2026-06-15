@@ -17,8 +17,8 @@
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        primary: '#4f46e5',
-                        'primary-hover': '#4338ca',
+                        primary: '#16a34a', // green-600
+                        'primary-hover': '#15803d', // green-700
                     }
                 }
             }
@@ -26,10 +26,10 @@
     </script>
     
     </head>
-<body class="bg-[#f0f9ff] flex flex-col items-center justify-center min-h-screen font-sans relative overflow-hidden">
+<body class="bg-[#f0fdf4] flex flex-col items-center justify-center min-h-screen font-sans relative overflow-hidden">
 
-    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
-    <div class="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+    <div class="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
 
     <div class="w-full max-w-md z-10 px-4">
         

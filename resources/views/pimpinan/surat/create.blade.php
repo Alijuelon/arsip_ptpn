@@ -101,16 +101,37 @@
 
     <script>
         document.getElementById('file_upload').addEventListener('change', function(e) {
-            const fileName = e.target.files[0]?.name;
+            const file = e.target.files[0];
             const displayArea = document.getElementById('file_display');
             const successArea = document.getElementById('file_success');
             const nameText = document.getElementById('file_name_text');
             const dropArea = document.getElementById('drop_area');
 
-            if (fileName) {
+            if (file) {
+                // Validasi ukuran maksimal 10MB
+                if (file.size > 10 * 1024 * 1024) {
+                    if (typeof Swal !== 'undefined') {
+                        Swal.fire({
+                            title: 'Ukuran Terlalu Besar!',
+                            text: 'Maksimal ukuran file dokumen adalah 10MB.',
+                            icon: 'error',
+                            confirmButtonColor: '#4f46e5'
+                        });
+                    } else {
+                        alert('Gagal: Ukuran file melebihi batas maksimal 10MB.');
+                    }
+                    
+                    e.target.value = ''; // Reset file
+                    displayArea.classList.remove('hidden');
+                    successArea.classList.add('hidden');
+                    dropArea.classList.remove('border-green-400', 'bg-green-50');
+                    dropArea.classList.add('border-gray-300');
+                    return;
+                }
+
                 displayArea.classList.add('hidden');
                 successArea.classList.remove('hidden');
-                nameText.textContent = fileName;
+                nameText.textContent = file.name;
                 dropArea.classList.remove('border-gray-300');
                 dropArea.classList.add('border-green-400', 'bg-green-50');
             } else {

@@ -15,9 +15,9 @@
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        primary: '#4f46e5',
-                        'primary-light': '#e0e7ff',
-                        'primary-hover': '#4338ca',
+                        primary: '#16a34a', // green-600
+                        'primary-light': '#dcfce7', // green-100
+                        'primary-hover': '#15803d', // green-700
                     }
                 }
             }
@@ -35,7 +35,7 @@
         .custom-scrollbar-dark::-webkit-scrollbar-thumb:hover { background: #334155; } /* slate-700 */
     </style>
 </head>
-<body class="bg-[#f8fafc] text-gray-800 font-sans antialiased overflow-hidden flex h-screen">
+<body class="bg-[#f0fdf4] text-gray-800 font-sans antialiased overflow-hidden flex h-screen">
 
     @include('layouts.sidebar')
 
@@ -54,7 +54,7 @@
                     <p class="text-sm font-bold text-gray-900 group-hover:text-primary transition">{{ Auth::user()->nama_user }}</p>
                     <p class="text-xs text-gray-500 font-medium uppercase">{{ Auth::user()->role }}</p>
                 </div>
-                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-blue-500 flex items-center justify-center text-white font-bold shadow-md shadow-primary/40 uppercase transform group-hover:scale-105 transition">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-emerald-500 flex items-center justify-center text-white font-bold shadow-md shadow-primary/40 uppercase transform group-hover:scale-105 transition">
                     {{ substr(Auth::user()->nama_user, 0, 1) }}
                 </div>
             </div>
