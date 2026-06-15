@@ -13,31 +13,67 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-         User::create([
-            'nama_user' => 'Super Admin',
+        $depPersonalia = \App\Models\Departemen::create([
+            'nama_departemen' => 'Personalia',
+            'keterangan' => 'Departemen Personalia'
+        ]);
+
+        $depTataUsaha = \App\Models\Departemen::create([
+            'nama_departemen' => 'Tata Usaha',
+            'keterangan' => 'Departemen Tata Usaha'
+        ]);
+
+        $depTanaman = \App\Models\Departemen::create([
+            'nama_departemen' => 'Tanaman',
+            'keterangan' => 'Departemen Tanaman'
+        ]);
+
+        // Akun Admin
+        User::create([
+            'nama_user' => 'Nabila (Admin)',
             'nip' => '111111',
-            'email' => 'admin@ptpn4.co.id',
+            'email' => 'Nabilaadmin51@gmail.com',
             'password' => Hash::make('123456'),
-            'role' => 'Admin' // Harus sesuai Enum di database ('Admin', 'Staff', 'Pimpinan')
+            'role' => 'Admin'
         ]);
 
-        // 2. Akun Karyawan / Staff
+        // Akun Pimpinan
         User::create([
-            'nama_user' => 'Budi Santoso',
-            'nip' => '222222',
-            'email' => 'karyawan@ptpn4.co.id',
-            'password' => Hash::make('123456'),
-            'role' => 'Staff'
-        ]);
-
-        // 3. Akun Pimpinan
-        User::create([
-            'nama_user' => 'Bapak Pimpinan',
+            'nama_user' => 'Eka Suryadharmawan (Manager)',
             'nip' => '333333',
-            'email' => 'pimpinan@ptpn4.co.id',
+            'email' => 'ekasuryadharmawanmanager@gmail.com',
             'password' => Hash::make('123456'),
             'role' => 'Pimpinan'
         ]);
-    }
-    }
 
+        // Akun Departemen Personalia
+        User::create([
+            'nama_user' => 'Sholahhuddin (Personalia)',
+            'nip' => '222221',
+            'email' => 'Sholahhuddinkaryawanpersonalia@gmail.com',
+            'password' => Hash::make('123456'),
+            'role' => 'Staff',
+            'departemen_id' => $depPersonalia->id
+        ]);
+
+        // Akun Departemen Tata Usaha
+        User::create([
+            'nama_user' => 'Aang Supriyadi (Tata Usaha)',
+            'nip' => '222222',
+            'email' => 'aangsupriyadikaryawantatausaha@gmail.com',
+            'password' => Hash::make('123456'),
+            'role' => 'Staff',
+            'departemen_id' => $depTataUsaha->id
+        ]);
+
+        // Akun Departemen Tanaman
+        User::create([
+            'nama_user' => 'Maulana (Tanaman)',
+            'nip' => '222223',
+            'email' => 'maulanapoday@gmail.com',
+            'password' => Hash::make('123456'),
+            'role' => 'Staff',
+            'departemen_id' => $depTanaman->id
+        ]);
+    }
+}
